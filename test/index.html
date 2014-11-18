@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Jasmine Spec Runner</title>
+        <link rel="stylesheet" href="bower_components/jasmine/lib/jasmine-core/jasmine.css">
+    </head>
+    <body>
+        <script src="bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
+        <script src="bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+<!--        <script src="bower_components/jasmine-jquery/lib/jasmine-jquery.js"></script>-->
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+
+        <!-- include source files here... -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/templates.js"></script>
+        <script src="scripts/models/blade-hero.js"></script>
+        <script src="scripts/models/blade.js"></script>
+        <script src="scripts/collections/blades.js"></script>
+        <script src="scripts/models/sk.js"></script>
+        <script src="scripts/views/blade.js"></script>
+        <script src="scripts/views/new-blade.js"></script>
+        <script src="scripts/views/sk.js"></script>
+
+        <!-- include spec files here... -->
+        <script src="spec/models-blade.js"></script>
+        <script src="spec/models-sk.js"></script>
+        <script src="spec/views-sk.js"></script>
+        <script src="spec/views-blade.js"></script>
+        <script src="spec/views-new-blade.js"></script>
+        <script src="spec/controllers-main.js"></script>
+
+        <script>
+            (function() {
+                var jasmineEnv = jasmine.getEnv();
+                jasmineEnv.updateInterval = 1000;
+                var htmlReporter = new jasmine.HtmlReporter();
+                jasmineEnv.addReporter(htmlReporter);
+                jasmineEnv.specFilter = function(spec) {
+                    return htmlReporter.specFilter(spec);
+                };
+                var currentWindowOnload = window.onload;
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    execJasmine();
+                };
+                function execJasmine() {
+                    jasmineEnv.execute();
+                }
+            })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "generator-backbone": {
+    "appPath": "app",
+    "appName": "Skwk",
+    "coffee": true,
+    "testFramework": "jasmine",
+    "templateFramework": "lodash",
+    "compassBootstrap": true
+  },
+  "generator-jasmine": {}
+}

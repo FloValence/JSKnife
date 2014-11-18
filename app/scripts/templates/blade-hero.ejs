@@ -1,0 +1,11 @@
+<div class="hero jumbotron">
+
+<h2><%= title %></h2>
+<% for (var i=0; i<content.length; i++) { %>
+<p><%= content[i] %></p>
+<% } %>
+<% if(typeof(button) != "undefined") { %>
+	<button class="btn btn-lg<% if(button.success === true) { %> btn-success <% } %><% if(button.primary === true) { %> btn-primary <% } %>" data-action="<%= button.action %>"><%= button.value %></button>
+<% } %>
+
+</div>
