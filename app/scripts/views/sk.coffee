@@ -18,7 +18,7 @@ class Skwk.Views.Sk extends Backbone.View
   initialize: (options) ->
     #@render()
     options = options || {}
-    @model = new Skwk.Models.Sk
+    @model = new Skwk.Models.Sk(title: options.title)
 
     # Adding th default controller
     @controllers.main = new Skwk.Controllers.createMainController @
@@ -40,8 +40,9 @@ class Skwk.Views.Sk extends Backbone.View
   render: () ->
     @$el.empty()
 
-    # Render the title
-    @$el.append '<h1>' + @model.get('title') + '</h1>'
+    # Render the title if showTitle equals true
+    if @model.get('title').get('show') == true
+      @renderTitle()
 
     #@$el.html @template(@model.toJSON())
 
@@ -54,6 +55,10 @@ class Skwk.Views.Sk extends Backbone.View
       this.$el.append bladeView.el
 
     @
+
+  renderTitle: () ->
+    bladeView = new Skwk.Views.Blade model: @model.get('title')
+    this.$el.append bladeView.el
 
   addBlade: (blade)->
     @model.addBlade blade

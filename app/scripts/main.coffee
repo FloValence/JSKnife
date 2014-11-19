@@ -4,24 +4,10 @@ window.Skwk =
   Views: {}
   Routers: {}
   Controllers: {}
+  params: {}
   init: ->
     'use strict'
-    blades =
-      [
-        {
-          title: 'Premier Blade',
-          content: [
-            'Mon paragraphe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ab nulla animi incidunt ex totam ad, iure, impedit doloribus minima, accusamus explicabo, ipsum voluptatum magni non quos corrupti natus deleniti.'
-          ],
-          button: {
-            value: 'Mise en avant',
-            action: 'appuiiie'
-          }
-        },
-        {title: 'Deuxieme Blade',
-        type: 'test'}
-      ]
-    test = new Skwk.Views.Sk(blades: blades)
+    test = new Skwk.Views.Sk({blades: Skwk.params.blades, title: Skwk.params.title})
     test.render()
     console.log 'Hello from Backbone!'
 

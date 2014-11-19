@@ -11,7 +11,7 @@ class Skwk.Models.Blade extends Backbone.Model
 
   defaults:
     title: 'Blade\'s title'
-    type: 'hero'
+    type: 'jumbotron'
     content: []
 
   validate: (attrs, options) ->

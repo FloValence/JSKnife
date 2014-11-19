@@ -1,0 +1,15 @@
+<div class="text-hr" <% if (typeof(background) != "undefined" || color != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %>"<% } %>>
+
+	<% if (typeof(href) != "undefined") { %><a href="<%= href %>" style="display:block;<% if (typeof(background) != "undefined" || color != "undefined") { %> <% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %><% } %>" class="jumbotron"><% } %>
+
+		<div class="container">
+
+
+			<p><%= content %></p>
+
+
+		</div>
+
+	<% if  (typeof(href) != "undefined") { %></a><% } %>
+
+</div>

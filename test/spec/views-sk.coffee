@@ -43,20 +43,24 @@ describe 'Sk main view', ->
     expect(titre1).toBe('Premier Blade')
     expect(titre2).toBe('Deuxieme Blade')
 
-  it 'should render its own title', ->
+  it 'should render its model\'s title if showTitle is set to true', ->
+    appView.model.get('title').set('show', true)
+
     appView.render()
 
-    expect(appView.$('h1:first').text()).toBe(appView.model.get('title'))
+    console.log appView
+
+    expect(appView.$('h1:first').text()).toBe(appView.model.get('title').get('content'))
 
 
   it 'should render all its blades', ->
     appView.render()
     expect(appView.$('h2:first').text()).toBe('Premier Blade')
 
-  it 'should change the model attributes via a shorcut View.set', ->
-    appView.set('title', 'New title')
+  xit 'should change the model attributes via a shorcut View.set', ->
+    appView.set('title', {value: 'New title'})
 
-    expect(appView.model.get( 'title' )).toBe( 'New title' )
+    expect(appView.model.get( 'title' ).value).toBe( 'New title' )
 
-    appView.set({title: 'Flo an mèt'})
-    expect(appView.model.get( 'title' )).toBe( 'Flo an mèt' )
+    appView.set({title: {value: 'Flo an mèt'}})
+    expect(appView.model.get( 'title' ).value).toBe( 'Flo an mèt' )

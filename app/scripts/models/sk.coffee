@@ -4,7 +4,7 @@ class Skwk.Models.Sk extends Backbone.Model
 
   defaults:
     blades: new Skwk.Collections.Blades
-    title: 'Swiss Kniffe WebKit'
+    title: null
 
   validate: (attrs, options) ->
 
@@ -15,8 +15,23 @@ class Skwk.Models.Sk extends Backbone.Model
     @get('blades').add( attrs )
     @trigger('change:blades')
 
+  setTitle: (obj)->
+    if typeof(obj) != {}
+      obj = @get('title')
+    @set('titleBlade', new Skwk.Models.Blade {title: obj.content, content: obj.content, class: obj.titleClass, type: 'title'}, obj)
+    console.log obj
 
-  initialize: () ->
-    #console.log Skwk
-    @blades = new Skwk.Collections.Blades
+
+  initialize: (attrs) ->
+
+    @set('title', new Skwk.Models.Title( @get('title') ))
+
+
+    # Adding the page title
+    if @get('title') == null
+      @setTitle()
+
+    # Setting the event listeners
+    @.on 'change:title', @setTitle, @
+
     @
