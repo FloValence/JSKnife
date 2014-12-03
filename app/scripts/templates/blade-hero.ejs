@@ -1,7 +1,7 @@
-<div class="hero-unit jumbotron"<% if (typeof(background) != undefined) { %> style="background:<%= background %>"<% } %>>
+<div class="hero-unit jumbotron<% if (typeof(parallax) != "undefined") { %> parallax<% } %>"<% if (typeof(background) != "undefined" || typeof(color) != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %>"<% } %><% if (typeof(parallax) != "undefined") { %>data-speed="<%=parallax.speed%>"<% } %>>
 <div class="container">
 
-<h2><%= title %></h2>
+<h2<% if (typeof(titleColor) != "undefined") { %> style="color:<%= titleColor %>;"<% } %>><%= title %></h2>
 <% for (var i=0; i<content.length; i++) { %>
 <p><%= content[i] %></p>
 <% } %>

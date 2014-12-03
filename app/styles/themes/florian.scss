@@ -1,0 +1,27 @@
+$main:		#2B6A64;
+$light: 	#86E2D5;
+$emph:		#FFD85A;
+$color:		#0B1B19;
+
+a {
+	color: $main;
+	&:hover {
+		color: $main;
+	}
+}
+
+.wide-image {
+	background-size: cover;
+}
+
+.navbar {
+	background-color: $light;
+	color: $main;
+	li > a {
+		color: $main;
+		&:hover {
+			background-color: $main;
+			color: $light
+		}
+	}
+}

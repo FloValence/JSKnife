@@ -1,14 +1,13 @@
 # TODO
 
-* Add a system allowing to get the HTML generated
-* Add a top menu system
+* Add a top menu system -> in progress, set as a blade 'header'
 * Create a user interface to create there pages
+* Add a system allowing to get the HTML generated
 * Manage a gallery of themes
 
 
 ## Blades to create
 
-* wide image
 * 3 colomns marketing
 * Big quote
 * footer
@@ -20,3 +19,8 @@
 * blog article
 * info contact
 * footer
+
+
+## May be one day
+
+* theme genrator

@@ -4,12 +4,14 @@ window.Skwk =
   Views: {}
   Routers: {}
   Controllers: {}
+  Utilis: {}
   params: {}
   init: ->
     'use strict'
     test = new Skwk.Views.Sk({blades: Skwk.params.blades, title: Skwk.params.title})
     test.render()
     console.log 'Hello from Backbone!'
+    Skwk.Utilis.launchParallax()
 
 
 $ ->
