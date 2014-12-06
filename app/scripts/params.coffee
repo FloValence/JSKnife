@@ -54,6 +54,70 @@ Skwk.params.blades = [
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae a aperiam maxime molestias accusantium commodi eveniet fuga qui praesentium aut inventore voluptas iste officia natus.'
   }
 
+  {
+    type: 'skills'
+    title: 'Mes talents'
+    skills: [
+      {
+        title: 'HTML5/CSS3'
+        progress: 90
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'success'
+        striped: true
+        active: true
+        panel: 'success'
+      }
+      {
+        title: 'SASS/Compass'
+        progress: 90
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'info'
+        striped: true
+        active: true
+      }
+      {
+        title: 'JS/JQUERY'
+        progress: 80
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'success'
+        striped: true
+        active: true
+      }
+      {
+        title: 'Photoshop/Illustrator'
+        progress: 90
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'success'
+        striped: true
+        active: true
+      }
+      {
+        title: 'Gestion de projet'
+        progress: 60
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'success'
+        striped: true
+        active: true
+      }
+      {
+        title: 'WebDesign'
+        progress: 80
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'success'
+        striped: true
+        active: true
+      }
+      {
+        title: 'HTML5/CSS3'
+        progress: 90
+        content: 'Intégration de sites web, <br> adaptations multi-plateforme'
+        context: 'success'
+        striped: true
+        active: true
+      }
+    ]
+  }
+
 ]
 
 

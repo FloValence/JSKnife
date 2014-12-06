@@ -12,19 +12,19 @@
 <div class="row">
 <% for (var i=0; i<skills.length; i++) { %>
 	<div class="col-lg-4 col-md-4">
-		<div class="panel panel-">
+		<div class="panel panel-default <% if(typeof(skills[i].panel) != "undefined"){ %> panel-<%=skills[i].panel%><% } %>">
 			<div class="panel-heading">
 				<h3 class="panel-title"><%=skills[i].title%></h3>
 			</div>
 			<div class="panel-body">
 				<div class="progress">
-					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<%=skills[i].progress%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=skills[i].progress%>%">
+					<div class="progress-bar<% if(typeof(skills[i].context) != "undefined"){ %> progress-bar-<%=skills[i].context%><% } %><% if(skills[i].striped == true){ %> progress-bar-striped<% } %><% if(skills[i].active == true){ %> active<% } %>" role="progressbar" aria-valuenow="<%=skills[i].progress%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=skills[i].progress%>%">
     					<span class="sr-only"><%=skills[i].progress%>% Complete</span>
 					</div>
 				</div>
 				<% if (typeof(skills[i].content) != "undefined") %>
 				<p>
-					skills[i].content
+					<%= skills[i].content %>
 				</p>
 			</div>
 		</div>
