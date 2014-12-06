@@ -27,6 +27,13 @@ Skwk.params.blades = [
   }
 
   {
+    type: 'quote'
+    content: 'Au lieu d\'imaginer le plus fou, crée-le !'
+    color: '#2B6A64'
+    background: '#86E2D5'
+  }
+
+  {
     content:
       [
         'Je suis en quête permantede nouvelles connaissance dans les domaines qui me tiennet à coeur, plus spécialement le web, le front-end et le graphisme multimedia.'
