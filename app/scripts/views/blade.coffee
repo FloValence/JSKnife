@@ -16,7 +16,6 @@ class Skwk.Views.Blade extends Backbone.View
 
   initialize: () ->
     @render()
-    console.log @
 
   render: () ->
     @$el.html @template(@model.toJSON())

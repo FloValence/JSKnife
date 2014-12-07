@@ -28,7 +28,6 @@ class Skwk.Views.Sk extends Backbone.View
     blades = options.blades || []
 
     _.forEach(options.blades, (blade)=>
-      console.log blade
       @addBlade blade
     )
 
