@@ -50,8 +50,9 @@ class Skwk.Views.Sk extends Backbone.View
 
     # We make a view for each element
     blades.each (blade)=>
-      bladeView = new Skwk.Views.Blade model: blade
-      this.$el.append bladeView.el
+      if blade.get('publish') == true
+        bladeView = new Skwk.Views.Blade model: blade
+        this.$el.append bladeView.el
 
     @
 

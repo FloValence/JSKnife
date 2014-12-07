@@ -13,6 +13,7 @@ class Skwk.Models.Blade extends Backbone.Model
     title: 'Blade\'s title'
     type: 'jumbotron'
     content: []
+    publish: true
 
   validate: (attrs, options) ->
 

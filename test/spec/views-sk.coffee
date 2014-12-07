@@ -48,14 +48,17 @@ describe 'Sk main view', ->
 
     appView.render()
 
-    console.log appView
-
     expect(appView.$('h1:first').text()).toBe(appView.model.get('title').get('content'))
 
 
   it 'should render all its blades', ->
     appView.render()
     expect(appView.$('h2:first').text()).toBe('Premier Blade')
+
+  it 'shouldn\'t render unpublish blades', ->
+    appView.addBlade({title: 'Unpublished Blade',type: 'test', publish: false})
+    appView.render()
+    expect(appView.$('h2:contains("Unpublished Blade")')[0]).toBeUndefined()
 
   xit 'should change the model attributes via a shorcut View.set', ->
     appView.set('title', {value: 'New title'})
