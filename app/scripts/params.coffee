@@ -29,7 +29,9 @@ Skwk.params.blades = [
   {
     type: 'quote'
     content: 'Au lieu d\'imaginer le plus fou, crée-le !'
+    author: 'Modestement moi'
     color: '#2B6A64'
+    authorColor: '#2B6A64'
     background: '#86E2D5'
   }
 
@@ -59,11 +61,15 @@ Skwk.params.blades = [
     column3:
       title: 'Graphisme Multimédia'
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae a aperiam maxime molestias accusantium commodi eveniet fuga qui praesentium aut inventore voluptas iste officia natus.'
+    color: '#2B6A64'
+    background: '#86E2D5'
   }
 
   {
     type: 'skills'
     title: 'Mes talents'
+    color: '#86E2D5'
+    background: '#2B6A64'
     skills: [
       {
         title: 'HTML5/CSS3'

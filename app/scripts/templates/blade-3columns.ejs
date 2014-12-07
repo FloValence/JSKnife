@@ -1,5 +1,5 @@
-<div class="3comluns container">
-
+<div class="3comluns" <% if (typeof(background) != "undefined" || typeof(color) != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %>"<% } %>>
+<div class="container">
 <h2><%=title%></h2>
 
 
@@ -24,4 +24,5 @@
 	</div>
 </div>
 
+</div>
 </div>

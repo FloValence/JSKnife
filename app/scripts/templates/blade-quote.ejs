@@ -14,9 +14,11 @@ author: the author
 
  -->
 
-<div class="quote" <% if (typeof(background) != "undefined" || typeof(color) != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %>"<% } %>>
-	<blockquote class="large-12 columns">
+<div class="quote" <% if (typeof(background) != "undefined" || typeof(color) != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>; border-left-color:<%= color%><% } %>"<% } %>>
+<div class="container">
+	<blockquote class="large-12 columns" <% if (typeof(color) != "undefined") { %> style="<% if (typeof(color) != "undefined") { %> border-left-color:<%= color%>;<% } %>"<% } %>>
 		<p>“<%=content%>”</p>
-		<% if (typeof(author) != "undefined") { %><cite<% if (typeof(authorColor) != "undefined") { %> style="<% if (typeof(authorColor) != "undefined") { %> authorColor:<%= color %>;<% } %>"<% } %>><%=author%></cite><% } %>
+		<% if (typeof(author) != "undefined") { %><footer<% if (typeof(authorColor) != "undefined") { %> style="<% if (typeof(authorColor) != "undefined") { %> color:<%= color %>;<% } %>"<% } %>><cite><%=author%></cite></footer><% } %>
 	</blockquote>
+</div>
 </div>

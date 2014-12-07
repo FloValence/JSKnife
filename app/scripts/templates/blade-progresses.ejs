@@ -1,4 +1,4 @@
-<div class="progresses container">
+<div class="progresses container" <% if (typeof(background) != "undefined" || typeof(color) != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %>"<% } %>>
 
 <h2><%=title%></h2>
 
