@@ -3,7 +3,7 @@
 * Add a top menu system -> in progress, set as a blade 'header'
 * Create a user interface to create there pages
 * Add a system allowing to get the HTML generated
-* Manage a gallery of themes
+* Manage a gallery of themes 
 
 
 ## Blades to create

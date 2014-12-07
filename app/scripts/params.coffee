@@ -131,6 +131,33 @@ Skwk.params.blades = [
     ]
   }
 
+  {
+    type: 'footer-social'
+    title: 'Let\'s get in touch'
+    color: '#2B6A64'
+    background: '#86E2D5'
+    info:
+      title: 'Florian M Valence'
+      email: 'florian.m.valence@gmail.com'
+      phone: '+33 (0)6 80 35 63 96'
+      phonelnk: '+33680356496'
+      website: 'http://florian.valence.free.fr'
+    social:[
+      {
+        name: 'Twitter'
+        link: 'http://twitter.com/flovalence'
+        context: 'primary'
+      }
+
+      {
+        name: 'GitHub'
+        link: 'http://github.com/flovalence'
+        context: 'success'
+      }
+    ]
+
+  }
+
 ]
 
 

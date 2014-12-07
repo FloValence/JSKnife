@@ -1,5 +1,5 @@
 Skwk.Utilis.launchParallax = () ->
-    console.log $('.parallax').each ->
+    $('.parallax').each ->
     	$this = $(this)
 
     	parallax = ()->

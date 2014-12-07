@@ -1,0 +1,35 @@
+<div class="footer-social" <% if (typeof(background) != "undefined" || typeof(color) != "undefined") { %> style="<% if (typeof(background) != "undefined") { %> background:<%= background %>;<% } %><% if (typeof(color) != "undefined") { %> color:<%= color %>;<% } %>"<% } %>>
+<div class="container">
+<h2><%=title%></h2>
+
+
+<% if (typeof(intro) != "undefined") { %>
+<div class="row">
+	<%=intro%>
+</div>
+<% } %>
+
+<%
+	function myTrim(x){
+  		return x.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+	}
+%>
+
+<div class="row">
+	<div class="col-lg-8 col-md-8">
+		<h3><%=info.title%></h3>
+		<p><abbr title="Email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></abbr> <a href="mailto:<%=info.email%>"><%=info.email%></a></p>
+		<p><abbr title="Phone"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></abbr> <a href="tel:<% if (typeof(info.phonelnk) != "undefined"){%><%=info.phonelnk%><% } else { %><%=myTrim(info.phone)%><% } %>"><%=info.phone%></a></p>
+		<p><abbr title="Website"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></abbr> <a href="<%=info.website%>" target="_blank"><%=info.website%></p>
+	</div>
+	<div class="col-lg-4 col-md-4">
+		<h3><%=social.title%></h3>
+		<% for (var i = 0; i < social.length; i++) { %>
+			<a class="btn btn-default btn-lg<% if(typeof(social[i].context) != "undefined"){ %> btn-<%=social[i].context%><% } %>" href="<%=social[i].link%>" target="_blank"><%=social[i].name%></a>
+		<% }; %>
+
+	</div>
+</div>
+
+</div>
+</div>
